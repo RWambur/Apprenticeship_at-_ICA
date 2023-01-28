@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Book</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Update Book</h1>
+<form action="#" th:action="@{/update-book}" th:object="${book}" method="post">
+
+    <label> ID:<br>
+        <input type="text" th:field="*{id}">
+    </label> <br>
+    <p>Change Attributes:</p>
+    <label> Book Name:<br>
+        <input type="text" th:field="*{title}">
+    </label> <br>
+
+    <label> Author Name:<br>
+        <input type="text" th:field="*{author}">
+    </label> <br>
+
+    <br> <input type="submit" value="Change" onclick="location.href='/';">
+    <input type="button" value="Back" onclick="location.href='/';"/>
+</form>
+</body>
+</html>

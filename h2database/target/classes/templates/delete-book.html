@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Book</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Delete Book</h1>
+<form action="#" th:action="@{/delete-book}" th:object="${book}" method="post">
+
+    <label> ID:<br>
+        <input type="text" th:field="*{id}">
+    </label> <br>
+
+    <br> <input type="submit" value="Delete" onclick="location.href='/';">
+    <input type="button" value="Back" onclick="location.href='/';"/>
+</form>
+</body>
+</html>

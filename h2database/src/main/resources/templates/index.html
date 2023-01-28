@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <title>Book Store Database</title>
+    </head>
+    <body>
+    <style>
+        th, td {
+            border: 1px solid black;
+        }
+    </style>
+        <h1>Book Store Database</h1>
+        <div>
+            <input type="button" value="Create Book" onclick="location.href='/create-book';"/>
+            <input type="button" value="Update Book" onclick="location.href='/update-book';"/>
+            <input type="button" value="Delete Book" onclick="location.href='/delete-book';"/>
+        </div>
+        <table style="width: 50%">
+                <tr>
+                    <th>ID</th>
+                    <th>Book</th>
+                    <th>Author</th>
+                </tr>
+
+                <tr th:each="bookValue : ${bookList}">
+                    <td th:text="${bookValue.getId()}"></td>
+                    <td th:text="${bookValue.getTitle()}"></td>
+                    <td th:text="${bookValue.getAuthor()}"></td>
+            </table>
+    </body>
+</html>
